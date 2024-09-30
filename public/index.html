@@ -1,89 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My favorite music</title>
+    <style>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.13.2/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.13.2/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.13.2/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.13.2/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.13.2/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.13.2/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.13.2/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.13.2/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.13.2/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.13.2/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+body{background-color: antiquewhite;}
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
+
     </style>
+<link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <h1> My favorite music - Afrobeat </h1>
+    <p1>
+      People find it difficult to define music, some part of the world says music
+      heals the soul. which i believe it does, while some people view music as
+      noise when it's not organised but when it’s organised it’s one of the most
+      beautiful sounds ever, My favourite music is Afrobeat a music genre
+      originated from West Africa (Nigeria).
+      It is one of the most amazing music
+      genre out there and it's so widespread that even global stars from all
+      around the world are coming in to tap some African juice.
+    </p1>
+      
+      <div>  
+        <p2>
+        Here's a quick history on Afrobeat which was founded by Fela Anikulapo Kuti in the late 1960s. 
+       Fela Anikulapo Kuti was born in 1938 on 15 October 1938, in Abeokuta, Colonial Nigeria.
+        Afrobeat was influenced by a combination of different genres, e.g highlife, fuji, and jùjú,
+         as well as Yoruba vocal traditions, rhythm, and instruments.Afrobeat isn’t just music,
+          it’s a cultural force—a fusion of West African traditions, jazz, funk, and soul.
+        
+      </p2>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+      </div>
+      <img src="./images/fela 2.jpeg" alt="fela" style="width: 500px;" height="300px">
+      <img src="./images/b44d38f4eb3e4cae476d577d6daaae88514c8b84.jpg" alt="fela" style="width: 400px;" height="300px">
+        <div> <img src="./images/fela" alt="fela" style="width: 500px;" height="300px"></div>
+        <p1> <b> Fela Anikulapo Kuti</b> (Founder of Afrobeat).</p1>
+
+       <h3> Here's why i vibe with Afrobeat </h3> 
+<ul>
+  <li>    The rhythm is unmatched.     </li>
+  <li>The pioneer of Afrobeat Fela challenged a lot of politicians thorugh his song.</li> 
+  <li> One of his song called 'waka waka' is literally an anthem on the street on Lagos.</li>
+  <li>When you hear the beat of an Afrobeat song it's impossible to not be in motion.</li>
+
+</ul>
+
+      
+           
+I have visited the Afrika Shrine before (Fela Shrine) it's a trendy place in Lagos 
+famous for the songs and the vibes, it's an awesome place to feel the real vibes of Afrobeat. 
+A lot of  Afrobeat singers are always present there and it's a dance till dawn kind of place.
+  
+<h3> My personal experience with the vibes of Afrobeat</h3>
+
+<p>  My love for music dates back to when I was a kid, My mum always played songs (Traditional Yoruba Songs) every morning even if I didn't have to listen to them,
+  I had no choice but to listen to them because she played them so loud! Along the line, I started listening to all genres of music just to find my vibes. 
+  Then one day I was walking on the street when I heard one of Fela's songs called ZOMBIE
+   it's an interesting song where he was abusing corrupt politicians of Nigeria the rhythm of the song is so beautiful the drums are amazing. 
+  I can't express how I felt but it was an interesting feeling! Ever since then, I've been a fan of Afrobeat.
+ Afrobeat is a mood-changer for me. Whenever I hear the drums, I feel so amazing,The rhythm of Afrobeat is rare and
+ not a rhythm you will find in every music genre. It's present in Afrobeat only!
+   </p>
+  
   </body>
 </html>
+<div>
+  <p>
+    I researched into the simplest form of music definition it says
+    "Music is the art of arranging sounds in time to create beauty, evoke
+    emotions, and express ideas. It encompasses a rich tapestry of elements"
+    and that's a beautful definition so simple and understandable. 
+
+  </p> 
+</div>
